@@ -8,9 +8,9 @@
 void more_numbers(void)
 {
 int sh, bh;
-for (sh = 48; sh <= 58; sh++)
+for (sh = 0; sh <= 10; sh++)
 {
-for (bh = 48; bh < 64; bh++)
+for (bh = 0; bh < 15; bh++)
 {
 _putchar(bh++);
 }
