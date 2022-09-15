@@ -8,15 +8,15 @@
 
 int main(void)
 {
-  char c = 'a';
-if (c == _isupper(c))
+char c;
+if (c >= 65 && c <= 90)
 {
 _putchar("%c: %d\n", c, _isupper(c));
 return (1);
 }
- else (c !== _isupper(c))
+else
 {
-_putchar("%c: %d\n", c, _isupper(c));  
+_putchar("%c: %d\n", c, _isupper(c));
 return (0);
 }
 }
