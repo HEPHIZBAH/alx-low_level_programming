@@ -1,32 +1,30 @@
 #include "main.h"
-
 /**
-* cap_string - capitalizes everey word of a string
-* @s: string to modify
-*
-* Return: the resulting string
+* cap_string - capitalizes all words of a string
+* @s: input string.
+* Return: the pointer to dest.
 */
+
 char *cap_string(char *s)
 {
-int i, j;
+int joy = 0, i;
+int love[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-char spe[13] = {' ', '\t', '\n', ',', ';', '!', '?', '"', '(', ')', '{', '}'};
-
-for (i = 0; s[i] != '\0'; i++)
+if (*(s + joy) >= 97 && *(s + joy) <= 122)
+*(s + joy) = *(s + joy) - 32;
+joy++;
+while (*(s + joy) != '\0')
 {
-if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
-s[i] -= 32;
-for (j = 0; j < 13; j++)
+for (i = 0; i < 13; i++)
 {
-if (s[i] == spe[j])
+if (*(s + joy) == love[i])
 {
-if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-{
-s[i + 1] -= 32;
+if ((*(s + (joy + 1)) >= 97) && (*(s + (joy + 1)) <= 122))
+*(s + (joy + 1)) = *(s + (joy + 1)) - 32;
+break;
 }
 }
+joy++;
 }
-}
-
 return (s);
 }
