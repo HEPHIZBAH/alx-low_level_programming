@@ -1,0 +1,1 @@
+my Alx Assignment on pointers and arrays
